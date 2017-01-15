@@ -1,0 +1,11 @@
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-01-15 15:06:05
+project setup --topLevelPackage com.workercapital
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+entity jpa --class ~.domain.Survey
+field string --fieldName questionText --notNull
+repository jpa --all
+service --all
+web mvc setup
+web mvc view setup --type THYMELEAF
+ web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
